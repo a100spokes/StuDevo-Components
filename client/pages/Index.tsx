@@ -1,8 +1,12 @@
+import { useState } from "react";
 import LandindSlide from "../components/slides/LandindSlide";
+import QuestionSlide from "../components/slides/QuestionSlide";
 
 export default function Index() {
-  // Sample slideObject as provided in the requirement
-  const slideObject = {
+  const [currentSlide, setCurrentSlide] = useState<'landing' | 'question'>('landing');
+
+  // Sample slideObject for the first slide
+  const landingSlideObject = {
     id: "start",
     type: "info",
     funnelType: "studevo",
@@ -47,18 +51,46 @@ export default function Index() {
     },
   };
 
-  const handleButtonClick = (buttonText: string) => {
-    console.log(`Button clicked: ${buttonText}`);
+  // Sample slideObject for the second slide
+  const questionSlideObject = {
+    id: "info_founder",
+    type: "info",
+    funnelType: "studevo",
+    template: "ScreenInfo",
+    data: {
+      buttonText: "CONTINUE"
+    },
+    image: "/#",
+    imageText: "Founder of Studevo",
+    title: "\"More than 760,000",
+    description: "people mastered AI with Studevo\""
+  };
+
+  const handleLandingButtonClick = (buttonText: string) => {
+    console.log(`Landing slide button clicked: ${buttonText}`);
+    // Both YES and NO buttons navigate to the question slide
+    setCurrentSlide('question');
+  };
+
+  const handleQuestionButtonClick = (buttonText: string) => {
+    console.log(`Question slide button clicked: ${buttonText}`);
     // Here you would handle navigation to the next slide
     // For now, just logging the action
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <LandindSlide
-        slideObject={slideObject}
-        onButtonClick={handleButtonClick}
-      />
+      {currentSlide === 'landing' ? (
+        <LandindSlide
+          slideObject={landingSlideObject}
+          onButtonClick={handleLandingButtonClick}
+        />
+      ) : (
+        <QuestionSlide
+          slideObject={questionSlideObject}
+          onButtonClick={handleQuestionButtonClick}
+        />
+      )}
     </div>
   );
 }
