@@ -40,7 +40,7 @@ const ScreenInfo: React.FC<ScreenInfoProps> = ({ slideObject, onButtonClick }) =
                     alt="Founder giving a presentation on stage"
                   />
                   <div className="flex w-auto h-10 px-4 py-2 flex-col items-center absolute left-1/2 -translate-x-1/2 bottom-20 rounded-full bg-white/90 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)]">
-                    <div className="text-gray-800 text-center font-poppins text-base font-semibold leading-8 relative">
+                    <div className="text-gray-800 text-center font-poppins text-base font-semibold leading-6 relative">
                       {imageText}
                     </div>
                   </div>
