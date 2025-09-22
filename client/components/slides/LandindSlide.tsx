@@ -67,7 +67,7 @@ const LandindSlide: React.FC<LandindSlideProps> = ({
               className="flex p-[13px] justify-center items-center flex-1 border rounded-lg border-studevo-border relative"
             >
               <div className="flex pr-2 flex-col items-start relative">
-                <div className="text-studevo-indigo font-['Material_Icons'] text-2xl font-normal leading-6 relative">
+                <div className={`${index === 0 ? 'text-studevo-indigo' : 'text-studevo-emerald'} font-['Material_Icons'] text-2xl font-normal leading-6 relative`}>
                   {index === 0 ? "check_circle" : "star"}
                 </div>
               </div>
