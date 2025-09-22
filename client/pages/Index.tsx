@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LandindSlide from "../components/slides/LandindSlide";
-import QuestionSlide from "../components/slides/QuestionSlide";
+import ScreenInfo from "../components/slides/ScreenInfo";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<'landing' | 'question'>('landing');
@@ -62,8 +62,8 @@ export default function Index() {
     },
     image: "/#",
     imageText: "Founder of Studevo",
-    title: "\"More than 760,000",
-    description: "people mastered AI with Studevo\""
+    title: "More than 760,000",
+    description: "people mastered AI with Studevo"
   };
 
   const handleLandingButtonClick = (buttonText: string) => {
@@ -86,7 +86,7 @@ export default function Index() {
           onButtonClick={handleLandingButtonClick}
         />
       ) : (
-        <QuestionSlide
+        <ScreenInfo
           slideObject={questionSlideObject}
           onButtonClick={handleQuestionButtonClick}
         />
