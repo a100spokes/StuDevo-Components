@@ -39,8 +39,8 @@ const ScreenInfo: React.FC<ScreenInfoProps> = ({ slideObject, onButtonClick }) =
                     src="https://api.builder.io/api/v1/image/assets/TEMP/a9fba2e9d142108bded0b55895383d600385424f?width=744"
                     alt="Founder giving a presentation on stage"
                   />
-                  <div className="flex h-10 px-4 py-2 flex-col items-center relative rounded-full bg-white/90 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)]">
-                    <div className=" absolute left-1/2 -translate-x-1/2 bottom-6 text-gray-800 text-center font-poppins text-base font-semibold leading-6 ">
+                  <div className="flex h-10 px-4 py-2 flex-col items-center absolute left-1/2 -translate-x-1/2 bottom-6 rounded-full bg-white/90 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)]">
+                    <div className="text-gray-800 text-center font-poppins text-base font-semibold leading-6 relative">
                       {imageText}
                     </div>
                   </div>
