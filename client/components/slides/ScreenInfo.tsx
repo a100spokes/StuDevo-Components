@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SlideData {
   buttonText: string;
@@ -21,7 +21,10 @@ interface ScreenInfoProps {
   onButtonClick: (buttonText: string) => void;
 }
 
-const ScreenInfo: React.FC<ScreenInfoProps> = ({ slideObject, onButtonClick }) => {
+const ScreenInfo: React.FC<ScreenInfoProps> = ({
+  slideObject,
+  onButtonClick,
+}) => {
   const { data, imageText, title, description } = slideObject;
 
   return (

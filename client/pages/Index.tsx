@@ -3,7 +3,9 @@ import LandindSlide from "../components/slides/LandindSlide";
 import ScreenInfo from "../components/slides/ScreenInfo";
 
 export default function Index() {
-  const [currentSlide, setCurrentSlide] = useState<'landing' | 'question'>('landing');
+  const [currentSlide, setCurrentSlide] = useState<"landing" | "question">(
+    "landing",
+  );
 
   // Sample slideObject for the first slide
   const landingSlideObject = {
@@ -58,18 +60,18 @@ export default function Index() {
     funnelType: "studevo",
     template: "ScreenInfo",
     data: {
-      buttonText: "CONTINUE"
+      buttonText: "CONTINUE",
     },
     image: "/#",
     imageText: "Founder of Studevo",
     title: "More than 760,000",
-    description: "people mastered AI with Studevo"
+    description: "people mastered AI with Studevo",
   };
 
   const handleLandingButtonClick = (buttonText: string) => {
     console.log(`Landing slide button clicked: ${buttonText}`);
     // Both YES and NO buttons navigate to the question slide
-    setCurrentSlide('question');
+    setCurrentSlide("question");
   };
 
   const handleQuestionButtonClick = (buttonText: string) => {
@@ -80,7 +82,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      {currentSlide === 'landing' ? (
+      {currentSlide === "landing" ? (
         <LandindSlide
           slideObject={landingSlideObject}
           onButtonClick={handleLandingButtonClick}
