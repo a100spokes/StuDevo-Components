@@ -15,7 +15,23 @@ export default {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        sans: ["Poppins", "Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "sans-serif"],
+        sans: [
+          "Poppins",
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
+          "sans-serif",
+        ],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -62,14 +78,14 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // Custom colors for landing slide
-        'studevo': {
-          'navy': '#251868',
-          'navy-50': 'rgba(37, 24, 104, 0.5)',
-          'purple': '#4F46E5',
-          'indigo': '#6366F1',
-          'emerald': '#10B981',
-          'gray': '#6B7280',
-          'border': '#91A7FF',
+        studevo: {
+          navy: "#251868",
+          "navy-50": "rgba(37, 24, 104, 0.5)",
+          purple: "#4F46E5",
+          indigo: "#6366F1",
+          emerald: "#10B981",
+          gray: "#6B7280",
+          border: "#91A7FF",
         },
       },
       borderRadius: {

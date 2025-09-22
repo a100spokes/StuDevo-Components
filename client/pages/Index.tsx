@@ -21,30 +21,30 @@ export default function Index() {
           {
             title: "760K+ USERS' CHOICE",
             description: "Learned new skills",
-            icon: "/#"
+            icon: "/#",
           },
           {
             title: "RATED ON TRUSTPILOT",
             description: "4.5 Satisfaction Score",
-            icon: "/#"
-          }
+            icon: "/#",
+          },
         ],
         footerLinks: [
           {
             label: "Terms and Conditions",
-            href: "/#"
+            href: "/#",
           },
           {
             label: "Privacy Policy",
-            href: "/#"
+            href: "/#",
           },
           {
             label: "Subscription Terms",
-            href: "/#"
-          }
-        ]
-      }
-    }
+            href: "/#",
+          },
+        ],
+      },
+    },
   };
 
   const handleButtonClick = (buttonText: string) => {
