@@ -4,7 +4,9 @@ import ScreenInfo from "../components/slides/ScreenInfo";
 import QuestionSlide from "../components/slides/QuestionSlide";
 
 export default function Index() {
-  const [currentSlide, setCurrentSlide] = useState<"landing" | "info" | "question">("landing");
+  const [currentSlide, setCurrentSlide] = useState<
+    "landing" | "info" | "question"
+  >("landing");
 
   // Sample slideObject for the first slide
   const landingSlideObject = {
@@ -75,32 +77,32 @@ export default function Index() {
     template: "ScreenQuestion",
     data: {
       title: "What is your age?",
-      description: "We customize your AI challenge using your answers"
+      description: "We customize your AI challenge using your answers",
     },
     options: [
       {
         id: "18-24",
-        title: "18-24"
+        title: "18-24",
       },
       {
         id: "25-34",
-        title: "25-34"
+        title: "25-34",
       },
       {
         id: "35-44",
-        title: "35-44"
+        title: "35-44",
       },
       {
         id: "45+",
-        title: "45+"
-      }
+        title: "45+",
+      },
     ],
     section: {
       name: "About You",
       number: 1,
       progressPercent: 25,
-      sectionCount: 4
-    }
+      sectionCount: 4,
+    },
   };
 
   const handleLandingButtonClick = (buttonText: string) => {
