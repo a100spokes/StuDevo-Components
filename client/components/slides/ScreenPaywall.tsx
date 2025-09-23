@@ -356,13 +356,6 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({ slideObject, onSubmit }) 
                           : 'bg-white shadow-sm border border-gray-100'
                       } relative`}
                     >
-                      <div className="flex flex-col items-start relative">
-                        <div className={`font-material-icons text-2xl font-normal leading-6 relative ${
-                          selectedPlan.id === option.id ? 'text-[#4F46E5]' : 'text-gray-400'
-                        }`}>
-                          {selectedPlan.id === option.id ? 'radio_button_checked' : 'radio_button_unchecked'}
-                        </div>
-                      </div>
                       <div className="flex flex-col items-start gap-2 flex-1 relative">
                         <div className="w-full text-[#31345D] font-open-sans text-lg font-normal leading-[14px] relative">
                           {option.title}
