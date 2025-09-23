@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from "react";
 
 interface Review {
   id: string;
@@ -45,22 +45,22 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
     const startDelay = setTimeout(() => {
       const duration = 3000; // 3 seconds for full animation
       const startTime = Date.now();
-      
+
       const animate = () => {
         const elapsed = Date.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
+
         // Non-linear easing (ease-out curve)
         const eased = 1 - Math.pow(1 - progress, 3);
         const percentage = Math.floor(eased * 100);
-        
+
         setProgress(percentage);
-        
+
         if (progress < 1) {
           requestAnimationFrame(animate);
         }
       };
-      
+
       animate();
     }, 500);
 
@@ -85,28 +85,34 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
     <div className="flex w-full max-w-[420px] mx-auto h-[720px] pb-[172px] flex-col items-center bg-gradient-to-b from-gray-50 to-gray-50 relative">
       <div className="flex h-[720px] max-w-[450px] flex-col justify-center items-start flex-shrink-0 w-full relative">
         <div className="h-[644px] flex-shrink-0 w-full relative">
-          
           {/* Progress Circle */}
           <div className="flex w-40 h-40 flex-col justify-center items-start flex-shrink-0 absolute left-[130px] top-12">
             <div className="flex-1 w-full relative">
-              <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0">
+              <svg
+                width="160"
+                height="160"
+                viewBox="0 0 160 160"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute inset-0"
+              >
                 {/* Background circle */}
-                <path 
-                  d="M80 152C119.765 152 152 119.765 152 80C152 40.2355 119.765 8 80 8C40.2355 8 8 40.2355 8 80C8 119.765 40.2355 152 80 152Z" 
-                  stroke="#E5E7EB" 
+                <path
+                  d="M80 152C119.765 152 152 119.765 152 80C152 40.2355 119.765 8 80 8C40.2355 8 8 40.2355 8 80C8 119.765 40.2355 152 80 152Z"
+                  stroke="#E5E7EB"
                   strokeWidth="16"
                 />
                 {/* Progress circle */}
-                <path 
-                  d="M80 152C119.765 152 152 119.765 152 80C152 40.2355 119.765 8 80 8C40.2355 8 8 40.2355 8 80C8 119.765 40.2355 152 80 152Z" 
-                  stroke="#4F46E5" 
-                  strokeWidth="16" 
+                <path
+                  d="M80 152C119.765 152 152 119.765 152 80C152 40.2355 119.765 8 80 8C40.2355 8 8 40.2355 8 80C8 119.765 40.2355 152 80 152Z"
+                  stroke="#4F46E5"
+                  strokeWidth="16"
                   strokeLinecap="round"
                   fill="none"
                   strokeDasharray={circumference}
                   strokeDashoffset={strokeDashoffset}
                   transform="rotate(-90 80 80)"
-                  style={{ transition: 'stroke-dashoffset 0.1s ease-out' }}
+                  style={{ transition: "stroke-dashoffset 0.1s ease-out" }}
                 />
               </svg>
               <div className="flex w-40 h-40 justify-center items-center absolute inset-0">
@@ -143,7 +149,7 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
           {/* Reviews Carousel */}
           <div className="w-[372px] absolute left-6 top-[417px] h-[194px] overflow-hidden">
             <div
-              className={`flex ${enableTransition ? 'transition-transform duration-500 ease-in-out' : ''}`}
+              className={`flex ${enableTransition ? "transition-transform duration-500 ease-in-out" : ""}`}
               style={{ transform: `translateX(-${displayIndex * 100}%)` }}
               onTransitionEnd={() => {
                 if (displayIndex === extendedReviews.length - 1) {
@@ -160,7 +166,9 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
                     <div className="flex items-center w-full">
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="flex flex-col items-start">
-                          <div className="text-studevo-emerald font-['Material_Icons'] text-2xl font-normal leading-6">star</div>
+                          <div className="text-studevo-emerald font-['Material_Icons'] text-2xl font-normal leading-6">
+                            star
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -168,14 +176,20 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
                     <div className="flex flex-col items-start gap-2.5 w-full">
                       <div className="flex items-start gap-2 w-full">
                         <div className="flex flex-col items-start flex-1">
-                          <div className="text-[#31345D] font-poppins text-base font-semibold leading-6">{review.title}</div>
+                          <div className="text-[#31345D] font-poppins text-base font-semibold leading-6">
+                            {review.title}
+                          </div>
                         </div>
                         <div className="flex pl-4 flex-col items-start">
-                          <div className="text-gray-600 font-poppins text-sm font-normal leading-5">{review.subtitle}</div>
+                          <div className="text-gray-600 font-poppins text-sm font-normal leading-5">
+                            {review.subtitle}
+                          </div>
                         </div>
                       </div>
                       <div className="flex flex-col items-start w-full">
-                        <div className="w-full text-gray-600 font-poppins text-sm font-normal leading-5">{review.review}</div>
+                        <div className="w-full text-gray-600 font-poppins text-sm font-normal leading-5">
+                          {review.review}
+                        </div>
                       </div>
                     </div>
                   </div>

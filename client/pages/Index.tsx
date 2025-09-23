@@ -187,31 +187,34 @@ export default function Index() {
     data: {
       title: "750,000+ people",
       description: "have chosen Studevo",
-      subtitle: "Creating your personal challenge..."
+      subtitle: "Creating your personal challenge...",
     },
     reviews: [
       {
         id: "review_1",
         rating: "5.0",
         title: "Deliver real results at work",
-        review: "The AI insights I've gained through the program were instantly applicable in my role. The new skills have boosted both my productivity and overall impact at work.",
-        subtitle: "Tina"
+        review:
+          "The AI insights I've gained through the program were instantly applicable in my role. The new skills have boosted both my productivity and overall impact at work.",
+        subtitle: "Tina",
       },
       {
         id: "review_2",
         rating: "5.0",
         title: "Simple for everyone",
-        review: "Studevo empowers learners of every skill level to grasp complex AI concepts with ease. The platform turns challenging theories into practical skills that can be applied right away.",
-        subtitle: "Thomas"
+        review:
+          "Studevo empowers learners of every skill level to grasp complex AI concepts with ease. The platform turns challenging theories into practical skills that can be applied right away.",
+        subtitle: "Thomas",
       },
       {
         id: "review_3",
         rating: "5.0",
         title: "Confidence With AI",
-        review: "I've gained the confidence to tackle AI projects I once thought were out of reach. The platform's clear explanations and hands-on approach made learning practical.",
-        subtitle: "Jessica"
-      }
-    ]
+        review:
+          "I've gained the confidence to tackle AI projects I once thought were out of reach. The platform's clear explanations and hands-on approach made learning practical.",
+        subtitle: "Jessica",
+      },
+    ],
   };
 
   return (
@@ -248,11 +251,7 @@ export default function Index() {
           onButtonClick={handleStatsNext}
         />
       )}
-      {currentSlide === "calc" && (
-        <ScreenCalc
-          slideObject={screenCalcObject}
-        />
-      )}
+      {currentSlide === "calc" && <ScreenCalc slideObject={screenCalcObject} />}
     </div>
   );
 }
