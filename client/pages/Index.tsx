@@ -423,7 +423,12 @@ export default function Index() {
 
   const handleNameSubmit = (name: string) => {
     console.log("Name submitted:", name);
-    // Here you would handle the name submission and navigate to next slide
+    setCurrentSlide("paywall");
+  };
+
+  const handlePaywallSubmit = (selectedPlan: any) => {
+    console.log("Plan selected:", selectedPlan);
+    // Here you would handle the plan selection and payment processing
   };
 
   return (
