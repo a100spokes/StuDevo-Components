@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from "react";
 
 interface SlideData {
   formType: string;
@@ -23,7 +23,7 @@ interface ScreenNameProps {
 
 const ScreenName: React.FC<ScreenNameProps> = ({ slideObject, onSubmit }) => {
   const { data } = slideObject;
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(false);
 
   // Name validation - minimum 3 characters
@@ -48,7 +48,7 @@ const ScreenName: React.FC<ScreenNameProps> = ({ slideObject, onSubmit }) => {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       e.preventDefault();
       handleSubmit();
     }
@@ -86,8 +86,8 @@ const ScreenName: React.FC<ScreenNameProps> = ({ slideObject, onSubmit }) => {
           disabled={!isValid}
           className={`flex p-4 justify-center items-center w-full rounded-lg shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] transition-all duration-200 ${
             isValid
-              ? 'bg-[#4F46E5] text-white hover:bg-opacity-90 cursor-pointer'
-              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              ? "bg-[#4F46E5] text-white hover:bg-opacity-90 cursor-pointer"
+              : "bg-gray-300 text-gray-500 cursor-not-allowed"
           } relative`}
         >
           <div className="flex-1 text-center font-poppins text-base font-bold leading-6 relative">

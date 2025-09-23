@@ -10,7 +10,14 @@ import ScreenName from "../components/slides/ScreenName";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<
-    "landing" | "info" | "question" | "multi" | "stats" | "calc" | "email" | "name"
+    | "landing"
+    | "info"
+    | "question"
+    | "multi"
+    | "stats"
+    | "calc"
+    | "email"
+    | "name"
   >("landing");
 
   // Sample slideObject for the first slide
