@@ -59,6 +59,11 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject, onComplete }) => {
 
         if (progress < 1) {
           requestAnimationFrame(animate);
+        } else if (percentage === 100 && onComplete) {
+          // Navigate to next slide after a delay when progress reaches 100%
+          setTimeout(() => {
+            onComplete();
+          }, 1500);
         }
       };
 
