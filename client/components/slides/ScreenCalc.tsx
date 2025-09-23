@@ -133,50 +133,35 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
             </div>
           </div>
 
-          {/* Review Card */}
-          <div className="flex w-[372px] p-6 flex-col items-start gap-2 rounded-xl bg-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)] absolute left-6 top-[417px] h-[194px] overflow-hidden">
-            
-            {/* Review Carousel Container */}
-            <div 
-              className="flex transition-transform duration-500 ease-in-out w-full"
-              style={{
-                transform: `translateX(-${(currentReviewIndex * 100) / reviews.length}%)`,
-                width: `${reviews.length * 100}%`
-              }}
+          {/* Reviews Carousel */}
+          <div className="w-[372px] absolute left-6 top-[417px] h-[194px] overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentReviewIndex * 100}%)` }}
             >
-              {reviews.map((review, index) => (
-                <div key={review.id} className="flex flex-col gap-2 w-full flex-shrink-0" style={{ width: `${100 / reviews.length}%` }}>
-                  {/* Stars */}
-                  <div className="flex items-center w-full">
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i} className="flex flex-col items-start">
-                        <div className="text-studevo-emerald font-['Material_Icons'] text-2xl font-normal leading-6">
-                          star
+              {reviews.map((review) => (
+                <div key={review.id} className="min-w-full px-2">
+                  <div className="w-full h-[194px] p-6 flex flex-col items-start gap-2 rounded-xl bg-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
+                    {/* Stars */}
+                    <div className="flex items-center w-full">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="flex flex-col items-start">
+                          <div className="text-studevo-emerald font-['Material_Icons'] text-2xl font-normal leading-6">star</div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex flex-col items-start gap-2.5 w-full">
-                    {/* Header */}
-                    <div className="flex items-start gap-2 w-full">
-                      <div className="flex flex-col items-start flex-1">
-                        <div className="text-[#31345D] font-poppins text-base font-semibold leading-6">
-                          {review.title}
-                        </div>
-                      </div>
-                      <div className="flex pl-4 flex-col items-start">
-                        <div className="text-gray-600 font-poppins text-sm font-normal leading-5">
-                          {review.subtitle}
-                        </div>
-                      </div>
+                      ))}
                     </div>
-
-                    {/* Review Text */}
-                    <div className="flex flex-col items-start w-full">
-                      <div className="w-full text-gray-600 font-poppins text-sm font-normal leading-5">
-                        {review.review}
+                    {/* Content */}
+                    <div className="flex flex-col items-start gap-2.5 w-full">
+                      <div className="flex items-start gap-2 w-full">
+                        <div className="flex flex-col items-start flex-1">
+                          <div className="text-[#31345D] font-poppins text-base font-semibold leading-6">{review.title}</div>
+                        </div>
+                        <div className="flex pl-4 flex-col items-start">
+                          <div className="text-gray-600 font-poppins text-sm font-normal leading-5">{review.subtitle}</div>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-start w-full">
+                        <div className="w-full text-gray-600 font-poppins text-sm font-normal leading-5">{review.review}</div>
                       </div>
                     </div>
                   </div>
