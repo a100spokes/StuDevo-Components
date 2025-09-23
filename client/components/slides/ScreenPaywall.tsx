@@ -400,8 +400,10 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({ slideObject, onSubmit }) 
 
                   {/* Additional Info */}
                   <div className="w-[388px] h-11 relative">
-                    <div className="flex w-6 h-6 flex-col justify-center flex-shrink-0 text-gray-600 text-center font-material-icons text-2xl font-normal leading-6 absolute left-7 top-0">
-                      people
+                    <div className="absolute left-7 top-0 w-6 h-6 flex items-center justify-center text-gray-600">
+                      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm8 0c-.84 0-1.73.1-2.64.27 1.93 1.08 3.64 2.79 3.64 4.73v2H24v-2c0-2.21-4.03-5-9-5z"/>
+                      </svg>
                     </div>
                     <div className="flex w-[308px] h-5 flex-col justify-center flex-shrink-0 text-gray-600 text-center font-roboto text-sm font-normal leading-5 absolute left-13 top-0.5">
                       People using plan for 4 months achieve twice the results as people on 1-month plan.
