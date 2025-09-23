@@ -6,6 +6,7 @@ import MultiQuestionSlide from "../components/slides/MultiQuestionSlide";
 import ScreenStats from "../components/slides/ScreenStats";
 import ScreenCalc from "../components/slides/ScreenCalc";
 import ScreenEmail from "../components/slides/ScreenEmail";
+import ScreenName from "../components/slides/ScreenName";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<
