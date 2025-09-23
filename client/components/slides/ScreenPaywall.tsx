@@ -304,12 +304,7 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({ slideObject, onSubmit }) 
             </div>
             <div className="flex flex-col items-start gap-3 w-full relative">
               {data.youWillSection.text.map((item, index) => (
-                <div key={index} className="flex items-center w-full relative">
-                  <div className="flex pr-2 flex-col items-start relative">
-                    <div className="text-transparent font-material-icons text-2xl font-normal leading-6 relative">
-                      check_circle
-                    </div>
-                  </div>
+                <div key={index} className="flex items-center w-full relative">                 
                   <div className="flex w-[356px] flex-col items-start relative">
                     <div className="w-full text-black font-roboto text-base font-normal leading-6 relative">
                       {Object.values(item)[0]}
