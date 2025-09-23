@@ -19,6 +19,7 @@ export default function Index() {
     | "calc"
     | "email"
     | "name"
+    | "paywall"
   >("landing");
 
   // Sample slideObject for the first slide
