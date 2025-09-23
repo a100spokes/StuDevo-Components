@@ -236,6 +236,20 @@ export default function Index() {
     },
   };
 
+  const screenNameObject = {
+    id: "name_screen",
+    type: "form",
+    funnelType: "studevo",
+    template: "ScreenName",
+    data: {
+      formType: "text",
+      buttonText: "CONTINUE",
+      title: "What is your name?",
+      placeholder: "Enter your name",
+      skip: false,
+    },
+  };
+
   const handleCalcComplete = () => {
     setCurrentSlide("email");
   };
