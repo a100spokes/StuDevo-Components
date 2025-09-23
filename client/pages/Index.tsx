@@ -5,10 +5,11 @@ import QuestionSlide from "../components/slides/QuestionSlide";
 import MultiQuestionSlide from "../components/slides/MultiQuestionSlide";
 import ScreenStats from "../components/slides/ScreenStats";
 import ScreenCalc from "../components/slides/ScreenCalc";
+import ScreenEmail from "../components/slides/ScreenEmail";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<
-    "landing" | "info" | "question" | "multi" | "stats" | "calc"
+    "landing" | "info" | "question" | "multi" | "stats" | "calc" | "email"
   >("landing");
 
   // Sample slideObject for the first slide
@@ -217,6 +218,30 @@ export default function Index() {
     ],
   };
 
+  const screenEmailObject = {
+    id: "email_screen",
+    type: "form",
+    funnelType: "studevo",
+    template: "ScreenEmail",
+    data: {
+      formType: "email",
+      buttonText: "CONTINUE",
+      title: "Enter your email to unlock your Personal AI-Powered Income Growth Challenge",
+      description: "We value your privacy. Your data is safe and processed according to our Privacy Policy.",
+      placeholder: "Enter your email",
+      skip: false
+    }
+  };
+
+  const handleCalcComplete = () => {
+    setCurrentSlide("email");
+  };
+
+  const handleEmailSubmit = (email: string) => {
+    console.log("Email submitted:", email);
+    // Here you would handle the email submission and navigate to next slide
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       {currentSlide === "landing" && (
@@ -251,7 +276,18 @@ export default function Index() {
           onButtonClick={handleStatsNext}
         />
       )}
-      {currentSlide === "calc" && <ScreenCalc slideObject={screenCalcObject} />}
+      {currentSlide === "calc" && (
+        <ScreenCalc
+          slideObject={screenCalcObject}
+          onComplete={handleCalcComplete}
+        />
+      )}
+      {currentSlide === "email" && (
+        <ScreenEmail
+          slideObject={screenEmailObject}
+          onSubmit={handleEmailSubmit}
+        />
+      )}
     </div>
   );
 }
