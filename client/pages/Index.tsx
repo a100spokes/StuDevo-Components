@@ -226,11 +226,13 @@ export default function Index() {
     data: {
       formType: "email",
       buttonText: "CONTINUE",
-      title: "Enter your email to unlock your Personal AI-Powered Income Growth Challenge",
-      description: "We value your privacy. Your data is safe and processed according to our Privacy Policy.",
+      title:
+        "Enter your email to unlock your Personal AI-Powered Income Growth Challenge",
+      description:
+        "We value your privacy. Your data is safe and processed according to our Privacy Policy.",
       placeholder: "Enter your email",
-      skip: false
-    }
+      skip: false,
+    },
   };
 
   const handleCalcComplete = () => {
