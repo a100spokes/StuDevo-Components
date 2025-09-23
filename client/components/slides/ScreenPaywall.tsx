@@ -404,11 +404,9 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({ slideObject, onSubmit }) 
                       people
                     </div>
                     <div className="flex w-[308px] h-5 flex-col justify-center flex-shrink-0 text-gray-600 text-center font-roboto text-sm font-normal leading-5 absolute left-13 top-0.5">
-                      People using plan for 4 months achieve twice the
+                      People using plan for 4 months achieve twice the results as people on 1-month plan.
                     </div>
-                    <div className="flex w-[215px] h-5 flex-col justify-center flex-shrink-0 text-gray-600 text-center font-roboto text-sm font-normal leading-5 absolute left-[87px] top-6">
-                      results as people on 1-month plan.
-                    </div>
+                    
                   </div>
 
                   {/* Get Plan Button */}
