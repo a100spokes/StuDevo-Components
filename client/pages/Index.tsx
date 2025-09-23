@@ -1,11 +1,10 @@
 import { useState } from "react";
 import LandindSlide from "../components/slides/LandindSlide";
 import ScreenInfo from "../components/slides/ScreenInfo";
+import QuestionSlide from "../components/slides/QuestionSlide";
 
 export default function Index() {
-  const [currentSlide, setCurrentSlide] = useState<"landing" | "question">(
-    "landing",
-  );
+  const [currentSlide, setCurrentSlide] = useState<"landing" | "info" | "question">("landing");
 
   // Sample slideObject for the first slide
   const landingSlideObject = {
@@ -53,8 +52,8 @@ export default function Index() {
     },
   };
 
-  // Sample slideObject for the second slide
-  const questionSlideObject = {
+  // Sample slideObject for the second slide (ScreenInfo)
+  const infoSlideObject = {
     id: "info_founder",
     type: "info",
     funnelType: "studevo",
@@ -68,29 +67,83 @@ export default function Index() {
     description: "people mastered AI with Studevo",
   };
 
+  // Sample slideObject for the third slide (QuestionSlide)
+  const questionSlideObject = {
+    id: "question_age",
+    type: "radio",
+    funnelType: "studevo",
+    template: "ScreenQuestion",
+    data: {
+      title: "What is your age?",
+      description: "We customize your AI challenge using your answers"
+    },
+    options: [
+      {
+        id: "18-24",
+        title: "18-24"
+      },
+      {
+        id: "25-34",
+        title: "25-34"
+      },
+      {
+        id: "35-44",
+        title: "35-44"
+      },
+      {
+        id: "45+",
+        title: "45+"
+      }
+    ],
+    section: {
+      name: "About You",
+      number: 1,
+      progressPercent: 25,
+      sectionCount: 4
+    }
+  };
+
   const handleLandingButtonClick = (buttonText: string) => {
     console.log(`Landing slide button clicked: ${buttonText}`);
-    // Both YES and NO buttons navigate to the question slide
+    // Both YES and NO buttons navigate to the info slide
+    setCurrentSlide("info");
+  };
+
+  const handleInfoButtonClick = (buttonText: string) => {
+    console.log(`Info slide button clicked: ${buttonText}`);
+    // Continue button navigates to the question slide
     setCurrentSlide("question");
   };
 
-  const handleQuestionButtonClick = (buttonText: string) => {
-    console.log(`Question slide button clicked: ${buttonText}`);
+  const handleOptionSelect = (optionId: string) => {
+    console.log(`Option selected: ${optionId}`);
     // Here you would handle navigation to the next slide
     // For now, just logging the action
   };
 
+  const handleBackToInfo = () => {
+    setCurrentSlide("info");
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      {currentSlide === "landing" ? (
+      {currentSlide === "landing" && (
         <LandindSlide
           slideObject={landingSlideObject}
           onButtonClick={handleLandingButtonClick}
         />
-      ) : (
+      )}
+      {currentSlide === "info" && (
         <ScreenInfo
+          slideObject={infoSlideObject}
+          onButtonClick={handleInfoButtonClick}
+        />
+      )}
+      {currentSlide === "question" && (
+        <QuestionSlide
           slideObject={questionSlideObject}
-          onButtonClick={handleQuestionButtonClick}
+          onOptionSelect={handleOptionSelect}
+          onBack={handleBackToInfo}
         />
       )}
     </div>
