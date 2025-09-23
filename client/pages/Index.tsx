@@ -113,19 +113,50 @@ export default function Index() {
   };
 
   const handleInfoButtonClick = (buttonText: string) => {
-    console.log(`Info slide button clicked: ${buttonText}`);
-    // Continue button navigates to the question slide
     setCurrentSlide("question");
   };
 
   const handleOptionSelect = (optionId: string) => {
-    console.log(`Option selected: ${optionId}`);
-    // Here you would handle navigation to the next slide
-    // For now, just logging the action
+    setCurrentSlide("multi");
   };
 
   const handleBackToInfo = () => {
     setCurrentSlide("info");
+  };
+
+  const multiQuestionSlideObject = {
+    id: "checkbox_tools_already_familiar",
+    type: "checkbox",
+    funnelType: "studevo",
+    template: "MultiQuestionSlide",
+    data: {
+      buttonText: "NEXT STEP",
+      title: "Which AI tools are you already familiar with?",
+      subtitle: "Select all that apply",
+    },
+    options: [
+      { id: "new_to_tools", title: "I’m new to AI tools", icon: "/#" },
+      { id: "midjourney", title: "MidJourney", icon: "/#" },
+      { id: "gemini", title: "Google Gemini", icon: "/#" },
+      { id: "otter", title: "Otter", icon: "/#" },
+      { id: "aiva", title: "AIVA", icon: "/#" },
+      { id: "dalle", title: "DALL·E", icon: "/#" },
+      { id: "jasper", title: "Jasper", icon: "/#" },
+      { id: "copilot", title: "Copilot", icon: "/#" },
+      { id: "openai_playground", title: "OpenAI Playground", icon: "/#" },
+    ],
+    section: {
+      name: "AI experience",
+      number: 2,
+      progressPercent: 40,
+      sectionCount: 4,
+    },
+  } as const;
+
+  const handleBackToQuestion = () => setCurrentSlide("question");
+  const handleMultiNext = (selectedIds: string[]) => {
+    console.log("Selected tools:", selectedIds);
+    // navigate to next when available
   };
 
   return (
@@ -147,6 +178,13 @@ export default function Index() {
           slideObject={questionSlideObject}
           onOptionSelect={handleOptionSelect}
           onBack={handleBackToInfo}
+        />
+      )}
+      {currentSlide === "multi" && (
+        <MultiQuestionSlide
+          slideObject={multiQuestionSlideObject}
+          onNext={handleMultiNext}
+          onBack={handleBackToQuestion}
         />
       )}
     </div>
