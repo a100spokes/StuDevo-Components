@@ -30,7 +30,15 @@ interface ScreenCalcProps {
 const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
   const { data, reviews } = slideObject;
   const [progress, setProgress] = useState(0);
-  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  // Infinite carousel via clones: [last, ...reviews, first]
+  const extendedReviews = useMemo(() => {
+    if (reviews.length === 0) return [] as Review[];
+    const first = reviews[0];
+    const last = reviews[reviews.length - 1];
+    return [last, ...reviews, first];
+  }, [reviews]);
+  const [displayIndex, setDisplayIndex] = useState(1); // start at first real slide
+  const [enableTransition, setEnableTransition] = useState(true);
 
   // Progress animation - starts after 500ms, goes from 0 to 100 non-linearly
   useEffect(() => {
@@ -59,20 +67,19 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
     return () => clearTimeout(startDelay);
   }, []);
 
-  // Review carousel - auto-cycle every 4 seconds
+  // Review carousel - auto-cycle every 4 seconds forward only
   useEffect(() => {
+    if (extendedReviews.length <= 1) return;
     const interval = setInterval(() => {
-      setCurrentReviewIndex((prev) => (prev + 1) % reviews.length);
+      setEnableTransition(true);
+      setDisplayIndex((prev) => prev + 1);
     }, 4000);
-
     return () => clearInterval(interval);
-  }, [reviews.length]);
+  }, [extendedReviews.length]);
 
   // Calculate stroke dash offset for circular progress
   const circumference = 2 * Math.PI * 72; // radius = 72 (144/2 - 8 for stroke width)
   const strokeDashoffset = circumference - (progress / 100) * circumference;
-
-  const currentReview = reviews[currentReviewIndex];
 
   return (
     <div className="flex w-full max-w-[420px] mx-auto h-[720px] pb-[172px] flex-col items-center bg-gradient-to-b from-gray-50 to-gray-50 relative">
@@ -136,11 +143,18 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
           {/* Reviews Carousel */}
           <div className="w-[372px] absolute left-6 top-[417px] h-[194px] overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentReviewIndex * 100}%)` }}
+              className={`flex ${enableTransition ? 'transition-transform duration-500 ease-in-out' : ''}`}
+              style={{ transform: `translateX(-${displayIndex * 100}%)` }}
+              onTransitionEnd={() => {
+                if (displayIndex === extendedReviews.length - 1) {
+                  // Jump from cloned last to first real slide without reversing direction
+                  setEnableTransition(false);
+                  setDisplayIndex(1);
+                }
+              }}
             >
-              {reviews.map((review) => (
-                <div key={review.id} className="min-w-full px-2">
+              {extendedReviews.map((review) => (
+                <div key={review.id + '_clone'} className="min-w-full px-2">
                   <div className="w-full h-[194px] p-6 flex flex-col items-start gap-2 rounded-xl bg-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
                     {/* Stars */}
                     <div className="flex items-center w-full">
