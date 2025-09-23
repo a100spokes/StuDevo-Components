@@ -2,10 +2,11 @@ import { useState } from "react";
 import LandindSlide from "../components/slides/LandindSlide";
 import ScreenInfo from "../components/slides/ScreenInfo";
 import QuestionSlide from "../components/slides/QuestionSlide";
+import MultiQuestionSlide from "../components/slides/MultiQuestionSlide";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<
-    "landing" | "info" | "question"
+    "landing" | "info" | "question" | "multi"
   >("landing");
 
   // Sample slideObject for the first slide
