@@ -7,6 +7,7 @@ import ScreenStats from "../components/slides/ScreenStats";
 import ScreenCalc from "../components/slides/ScreenCalc";
 import ScreenEmail from "../components/slides/ScreenEmail";
 import ScreenName from "../components/slides/ScreenName";
+import ScreenPaywall from "../components/slides/ScreenPaywall";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<
