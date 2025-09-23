@@ -492,9 +492,18 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({ slideObject, onSubmit }) 
             {data.benefitsSection.list.map((benefit, index) => (
               <div key={index} className="flex items-center w-full relative">
                 <div className="flex pr-2 flex-col items-start relative">
-                  <div className="text-blue-500 font-material-icons text-2xl font-normal leading-6 relative">
-                    check_circle
-                  </div>
+                  <svg
+                    className="w-6 h-6"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#3B82F6" />
+                    <path
+                      d="M10.2 13.8L8 11.6l-1.4 1.4 3.6 3.6 7.2-7.2-1.4-1.4-5.8 5.8z"
+                      fill="#ffffff"
+                    />
+                  </svg>
                 </div>
                 <div className="flex flex-col items-start relative">
                   <div className="text-black font-roboto text-base font-normal leading-6 relative">
