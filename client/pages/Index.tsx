@@ -4,10 +4,11 @@ import ScreenInfo from "../components/slides/ScreenInfo";
 import QuestionSlide from "../components/slides/QuestionSlide";
 import MultiQuestionSlide from "../components/slides/MultiQuestionSlide";
 import ScreenStats from "../components/slides/ScreenStats";
+import ScreenCalc from "../components/slides/ScreenCalc";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<
-    "landing" | "info" | "question" | "multi" | "stats"
+    "landing" | "info" | "question" | "multi" | "stats" | "calc"
   >("landing");
 
   // Sample slideObject for the first slide
@@ -175,8 +176,42 @@ export default function Index() {
     setCurrentSlide("stats");
   };
   const handleStatsNext = (buttonText: string) => {
-    console.log("Stats continue clicked:", buttonText);
-    // navigate to next slide when available
+    setCurrentSlide("calc");
+  };
+
+  const screenCalcObject = {
+    id: "calculations_screen",
+    type: "calculations",
+    funnelType: "studevo",
+    template: "ScreenCalc",
+    data: {
+      title: "750,000+ people",
+      description: "have chosen Studevo",
+      subtitle: "Creating your personal challenge..."
+    },
+    reviews: [
+      {
+        id: "review_1",
+        rating: "5.0",
+        title: "Deliver real results at work",
+        review: "The AI insights I've gained through the program were instantly applicable in my role. The new skills have boosted both my productivity and overall impact at work.",
+        subtitle: "Tina"
+      },
+      {
+        id: "review_2",
+        rating: "5.0",
+        title: "Simple for everyone",
+        review: "Studevo empowers learners of every skill level to grasp complex AI concepts with ease. The platform turns challenging theories into practical skills that can be applied right away.",
+        subtitle: "Thomas"
+      },
+      {
+        id: "review_3",
+        rating: "5.0",
+        title: "Confidence With AI",
+        review: "I've gained the confidence to tackle AI projects I once thought were out of reach. The platform's clear explanations and hands-on approach made learning practical.",
+        subtitle: "Jessica"
+      }
+    ]
   };
 
   return (
@@ -211,6 +246,11 @@ export default function Index() {
         <ScreenStats
           slideObject={screenStatsObject}
           onButtonClick={handleStatsNext}
+        />
+      )}
+      {currentSlide === "calc" && (
+        <ScreenCalc
+          slideObject={screenCalcObject}
         />
       )}
     </div>
