@@ -256,7 +256,12 @@ export default function Index() {
 
   const handleEmailSubmit = (email: string) => {
     console.log("Email submitted:", email);
-    // Here you would handle the email submission and navigate to next slide
+    setCurrentSlide("name");
+  };
+
+  const handleNameSubmit = (name: string) => {
+    console.log("Name submitted:", name);
+    // Here you would handle the name submission and navigate to next slide
   };
 
   return (
