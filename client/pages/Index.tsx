@@ -163,8 +163,9 @@ export default function Index() {
       image: "/#",
       buttonText: "CONTINUE",
       title: "Your Personal AI-Powered Income Growth",
-      description: "From your responses, we've mapped out a path to help you master the skills needed to become an AI Expert by Nov 2025."
-    }
+      description:
+        "From your responses, we've mapped out a path to help you master the skills needed to become an AI Expert by Nov 2025.",
+    },
   };
 
   const handleBackToQuestion = () => setCurrentSlide("question");
