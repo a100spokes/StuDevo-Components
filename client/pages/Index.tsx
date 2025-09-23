@@ -276,7 +276,7 @@ export default function Index() {
             sectionText_1: "AI skills",
             sectionProgress_1: "45%",
             sectionText_2: "Income Potential",
-            sectionProgress_2: "50%"
+            sectionProgress_2: "50%",
           },
           {
             title: "Goal",
@@ -285,48 +285,49 @@ export default function Index() {
             sectionText_1: "AI skills",
             sectionProgress_1: "96%",
             sectionText_2: "Income Potential",
-            sectionProgress_2: "94%"
-          }
-        ]
+            sectionProgress_2: "94%",
+          },
+        ],
       },
       readinessSection: {
         title: "Your readiness: 4.5/5",
         subtitle: "4-week program is enough for you to achieve your goal!",
-        icon: "/#"
+        icon: "/#",
       },
       graphSection: {
         title: "AI is easier than you think",
-        image: "/#"
+        image: "/#",
       },
       youWillSection: {
         title: "Try Studevo and you will:",
         text: [
           {
-            text_1: "✅ Learn to use AI to make more money"
+            text_1: "✅ Learn to use AI to make more money",
           },
           {
-            text_2: "✅ Explore fresh career paths powered by AI"
+            text_2: "✅ Explore fresh career paths powered by AI",
           },
           {
-            text_3: "✅ Understand the most important AI terms and practices"
-          }
+            text_3: "✅ Understand the most important AI terms and practices",
+          },
         ],
-        image: "/#"
+        image: "/#",
       },
       tariffSection: {
         title: "Choose the best plan for you",
         subtitle: "Your promo code applied!",
-        description: "By continuing you agree to our Terms of Use and Privacy Policy. By clicking \"Get my plan now\", you agree that your subscription will renew automatically at $19.99/month until you cancel. You can cancel at any time to avoid future charges.",
+        description:
+          'By continuing you agree to our Terms of Use and Privacy Policy. By clicking "Get my plan now", you agree that your subscription will renew automatically at $19.99/month until you cancel. You can cancel at any time to avoid future charges.',
         subtariff: {
           text: "Your promo code applied!",
-          icon: "/#"
+          icon: "/#",
         },
         paysystem: [
-          {"icon": "/#"},
-          {"icon": "/#"},
-          {"icon": "/#"},
-          {"icon": "/#"},
-          {"icon": "/#"}
+          { icon: "/#" },
+          { icon: "/#" },
+          { icon: "/#" },
+          { icon: "/#" },
+          { icon: "/#" },
         ],
         options: [
           {
@@ -337,7 +338,7 @@ export default function Index() {
             newPrice: "$6.99",
             isDefault: false,
             currency: "USD",
-            value: 6.99
+            value: 6.99,
           },
           {
             id: "monthly",
@@ -347,7 +348,7 @@ export default function Index() {
             newPrice: "$15.99",
             isDefault: true,
             currency: "USD",
-            value: 15.99
+            value: 15.99,
           },
           {
             id: "yearly",
@@ -357,34 +358,35 @@ export default function Index() {
             newPrice: "$37.99",
             isDefault: false,
             currency: "USD",
-            value: 37.99
-          }
-        ]
+            value: 37.99,
+          },
+        ],
       },
       guaranteeSection: {
         title: "Money-Back Guarantee",
-        description: "We believe in our service so much that we back it with a 100% money-back guarantee. If you're not satisfied, simply request a refund within 30 days of your first purchase or before your initial subscription ends — whichever happens sooner. Terms and conditions apply. For full information, see our complete refund policy [here].",
-        image: "/#"
+        description:
+          "We believe in our service so much that we back it with a 100% money-back guarantee. If you're not satisfied, simply request a refund within 30 days of your first purchase or before your initial subscription ends — whichever happens sooner. Terms and conditions apply. For full information, see our complete refund policy [here].",
+        image: "/#",
       },
       benefitsSection: {
         title: "What you get",
         list: [
           {
-            text: "Step-by-step guides on the latest AI tools"
+            text: "Step-by-step guides on the latest AI tools",
           },
           {
-            text: "Personalized learning plan"
+            text: "Personalized learning plan",
           },
           {
-            text: "In-depth courses to sharpen your skills"
+            text: "In-depth courses to sharpen your skills",
           },
           {
-            text: "Practical resources to balance work and life"
+            text: "Practical resources to balance work and life",
           },
           {
-            text: "24/7 live chat support to answer questions and prevent errors"
-          }
-        ]
+            text: "24/7 live chat support to answer questions and prevent errors",
+          },
+        ],
       },
       reviewSection: {
         title: "People love Studevo",
@@ -392,24 +394,27 @@ export default function Index() {
           {
             id: "review_1",
             rating: "5.0",
-            review: "Learning with Studevo is clear, simple, and packed with all the essentials. It's the perfect starting point if you're just beginning your journey with AI.",
-            subtitle: "@sammymcoy1"
+            review:
+              "Learning with Studevo is clear, simple, and packed with all the essentials. It's the perfect starting point if you're just beginning your journey with AI.",
+            subtitle: "@sammymcoy1",
           },
           {
             id: "review_2",
             rating: "5.0",
-            review: "Studevo offers a broad collection of resources and interactive tools that make even the toughest AI concepts easy to grasp for learners at any level. Huge credit to Studevo for redefining how AI education is delivered!",
-            subtitle: "@gloria_hickle"
+            review:
+              "Studevo offers a broad collection of resources and interactive tools that make even the toughest AI concepts easy to grasp for learners at any level. Huge credit to Studevo for redefining how AI education is delivered!",
+            subtitle: "@gloria_hickle",
           },
           {
             id: "review_3",
             rating: "5.0",
-            review: "Studevo has made mastering complex subjects much easier while helping me sharpen my skills in different areas. The personalized approach, tailored to my goals, has greatly accelerated my progress and kept me motivated.",
-            subtitle: "@pattykuvva"
-          }
-        ]
-      }
-    }
+            review:
+              "Studevo has made mastering complex subjects much easier while helping me sharpen my skills in different areas. The personalized approach, tailored to my goals, has greatly accelerated my progress and kept me motivated.",
+            subtitle: "@pattykuvva",
+          },
+        ],
+      },
+    },
   };
 
   const handleCalcComplete = () => {
