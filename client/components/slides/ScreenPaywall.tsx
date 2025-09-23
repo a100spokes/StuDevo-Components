@@ -89,7 +89,7 @@ interface ScreenPaywallProps {
 
 const ScreenPaywall: React.FC<ScreenPaywallProps> = ({ slideObject, onSubmit }) => {
   const { data } = slideObject;
-  const [timeLeft, setTimeLeft] = useState(449); // 7:29 = 449 seconds
+  const [timeLeft, setTimeLeft] = useState(600); 
   const [selectedPlan, setSelectedPlan] = useState<TariffOption>(
     data.tariffSection.options.find(option => option.isDefault) || data.tariffSection.options[0]
   );
