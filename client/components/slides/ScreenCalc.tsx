@@ -28,7 +28,7 @@ interface ScreenCalcProps {
   onComplete?: () => void;
 }
 
-const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
+const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject, onComplete }) => {
   const { data, reviews } = slideObject;
   const [progress, setProgress] = useState(0);
   // Infinite carousel via clones: [last, ...reviews, first]
