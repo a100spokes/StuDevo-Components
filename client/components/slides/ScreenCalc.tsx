@@ -153,8 +153,8 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
                 }
               }}
             >
-              {extendedReviews.map((review) => (
-                <div key={review.id + '_clone'} className="min-w-full px-2">
+              {extendedReviews.map((review, idx) => (
+                <div key={`${review.id}-${idx}`} className="min-w-full px-2">
                   <div className="w-full h-[194px] p-6 flex flex-col items-start gap-2 rounded-xl bg-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
                     {/* Stars */}
                     <div className="flex items-center w-full">
