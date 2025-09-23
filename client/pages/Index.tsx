@@ -3,10 +3,11 @@ import LandindSlide from "../components/slides/LandindSlide";
 import ScreenInfo from "../components/slides/ScreenInfo";
 import QuestionSlide from "../components/slides/QuestionSlide";
 import MultiQuestionSlide from "../components/slides/MultiQuestionSlide";
+import ScreenStats from "../components/slides/ScreenStats";
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState<
-    "landing" | "info" | "question" | "multi"
+    "landing" | "info" | "question" | "multi" | "stats"
   >("landing");
 
   // Sample slideObject for the first slide
@@ -153,10 +154,28 @@ export default function Index() {
     },
   } as const;
 
+  const screenStatsObject = {
+    id: "info_stats",
+    type: "info",
+    funnelType: "studevo",
+    template: "ScreenStats",
+    data: {
+      image: "/#",
+      buttonText: "CONTINUE",
+      title: "Your Personal AI-Powered Income Growth",
+      description: "From your responses, we've mapped out a path to help you master the skills needed to become an AI Expert by Nov 2025."
+    }
+  };
+
   const handleBackToQuestion = () => setCurrentSlide("question");
+  const handleBackToMulti = () => setCurrentSlide("multi");
   const handleMultiNext = (selectedIds: string[]) => {
     console.log("Selected tools:", selectedIds);
-    // navigate to next when available
+    setCurrentSlide("stats");
+  };
+  const handleStatsNext = (buttonText: string) => {
+    console.log("Stats continue clicked:", buttonText);
+    // navigate to next slide when available
   };
 
   return (
@@ -185,6 +204,12 @@ export default function Index() {
           slideObject={multiQuestionSlideObject}
           onNext={handleMultiNext}
           onBack={handleBackToQuestion}
+        />
+      )}
+      {currentSlide === "stats" && (
+        <ScreenStats
+          slideObject={screenStatsObject}
+          onButtonClick={handleStatsNext}
         />
       )}
     </div>
