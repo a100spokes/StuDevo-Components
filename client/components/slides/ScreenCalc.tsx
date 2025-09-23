@@ -139,8 +139,8 @@ const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
             {/* Review Carousel Container */}
             <div 
               className="flex transition-transform duration-500 ease-in-out w-full"
-              style={{ 
-                transform: `translateX(-${currentReviewIndex * 100}%)`,
+              style={{
+                transform: `translateX(-${(currentReviewIndex * 100) / reviews.length}%)`,
                 width: `${reviews.length * 100}%`
               }}
             >
