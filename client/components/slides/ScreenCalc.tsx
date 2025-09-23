@@ -25,6 +25,7 @@ interface ScreenCalcObject {
 
 interface ScreenCalcProps {
   slideObject: ScreenCalcObject;
+  onComplete?: () => void;
 }
 
 const ScreenCalc: React.FC<ScreenCalcProps> = ({ slideObject }) => {
