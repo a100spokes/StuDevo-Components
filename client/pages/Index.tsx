@@ -483,6 +483,12 @@ export default function Index() {
           onSubmit={handleNameSubmit}
         />
       )}
+      {currentSlide === "paywall" && (
+        <ScreenPaywall
+          slideObject={screenPaywallObject}
+          onSubmit={handlePaywallSubmit}
+        />
+      )}
     </div>
   );
 }
