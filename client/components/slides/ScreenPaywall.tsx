@@ -466,8 +466,11 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({ slideObject, onSubmit }) 
 
         {/* Money-Back Guarantee */}
         <div className="h-[284px] w-full rounded-lg bg-green-50 relative px-6 py-6">
-          <div className="flex w-6 h-6 flex-col justify-center flex-shrink-0 text-green-500 text-center font-material-icons text-2xl font-normal leading-6 absolute left-[182px] top-6">
-            verified_user
+          <div className="absolute left-[182px] top-6 w-6 h-6 flex items-center justify-center text-green-500">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2l7 3v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-3z" fill="#10B981"/>
+              <path d="M10.2 12.6l-1.8-1.8-1.4 1.4 3.2 3.2 5-5-1.4-1.4-3.6 3.6z" fill="#ffffff"/>
+            </svg>
           </div>
           <div className="flex w-[340px] flex-col items-center absolute left-6 top-16 h-7">
             <div className="text-black text-center font-roboto text-xl font-bold leading-7 relative">
