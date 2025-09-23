@@ -310,6 +310,12 @@ export default function Index() {
           onSubmit={handleEmailSubmit}
         />
       )}
+      {currentSlide === "name" && (
+        <ScreenName
+          slideObject={screenNameObject}
+          onSubmit={handleNameSubmit}
+        />
+      )}
     </div>
   );
 }
