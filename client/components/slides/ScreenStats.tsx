@@ -65,7 +65,7 @@ const ScreenStats: React.FC<ScreenStatsProps> = ({ slideObject, onButtonClick })
             </div>
 
             {/* Footer Button */}
-            <div className="flex pt-8 flex-col justify-center items-center w-full relative">
+            <div className="flex p-4 pt-8 flex-col justify-center items-center w-full relative">
               <button
                 onClick={() => onButtonClick(data.buttonText)}
                 className="flex p-4 justify-center items-center w-full rounded-lg bg-studevo-purple shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] relative hover:bg-opacity-90 transition-all duration-200"
