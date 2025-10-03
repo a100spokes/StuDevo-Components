@@ -331,11 +331,11 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
 
           {/* App Screenshots */}
-          <div className="flex flex-col items-start gap-11 w-full px-4 relative">
-            <div className="flex pt-6 flex-col items-start gap-4 w-full relative">
-              <div className="flex justify-center items-start w-full relative">
+          <div className="flex flex-col items-start gap-10 self-stretch relative">
+            <div className="flex h-[414px] pt-6 flex-col items-center gap-4 self-stretch relative">
+              <div className="flex justify-center items-start flex-1 self-stretch relative">
                 <img
-                  className="max-w-[352px] flex-1 h-auto rounded-[10px] relative"
+                  className="flex h-[390px] flex-col justify-between items-start flex-1 aspect-square rounded-[10px] relative"
                   src="https://api.builder.io/api/v1/image/assets/TEMP/de6cd86374d60e7855d245fdbe738f0968bda232?width=704"
                   alt="Learning modules collage"
                 />
