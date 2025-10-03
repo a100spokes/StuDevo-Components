@@ -454,7 +454,7 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
                   {/* Get Plan Button */}
                   <button
                     onClick={handleSubmit}
-                    className="flex w-[388px] py-3 px-0 justify-center items-center rounded-[10px] bg-[#4F46E5] relative"
+                    className="flex py-3 px-0 justify-center items-center self-stretch rounded-[10px] bg-[#4F46E5] relative"
                   >
                     <div className="text-white text-center font-roboto text-base font-bold leading-6 relative">
                       {data.buttonText}
@@ -463,15 +463,15 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
                 </div>
 
                 {/* Terms */}
-                <div className="flex w-[388px] h-18 pb-2 flex-col items-center relative">
-                  <div className="text-gray-400 text-center font-roboto text-xs font-normal leading-4 relative">
+                <div className="flex pb-[9px] flex-col items-center self-stretch relative">
+                  <div className="self-stretch text-gray-400 text-center font-roboto text-xs font-normal leading-4 relative">
                     {data.tariffSection.description}
                   </div>
                 </div>
               </div>
 
               {/* Payment Methods */}
-              <div className="flex py-0 px-[74px] justify-center items-end gap-6 w-full relative">
+              <div className="flex justify-center items-center gap-[23px] self-stretch relative">
                 {/* Apple Pay */}
                 <svg
                   className="w-11 h-11 relative"
