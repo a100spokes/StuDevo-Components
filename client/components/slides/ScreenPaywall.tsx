@@ -129,8 +129,8 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
   };
 
   return (
-    <div className="flex w-full max-w-[420px] mx-auto min-h-[884px] flex-col items-center bg-white relative">
-      <div className="flex max-w-[450px] flex-col items-center w-full bg-white relative">
+    <div className="flex w-full max-w-[450px] mx-auto min-h-[884px] flex-col items-center bg-white relative">
+      <div className="flex min-w-[320px] max-w-[450px] px-[30px] flex-col items-center self-stretch bg-white relative">
         {/* Header with Timer */}
         <div className="flex h-32 p-4 flex-col justify-center items-center w-full relative">
           <div className="flex w-full max-w-[388px] p-4 flex-col justify-center items-end gap-2 rounded-lg bg-blue-50 relative">
