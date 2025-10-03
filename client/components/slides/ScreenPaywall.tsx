@@ -294,15 +294,15 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
 
           {/* Graph Section */}
-          <div className="flex h-[377px] p-6 pb-6 flex-col items-start gap-4 w-full rounded-lg bg-[#EAE7FF] relative">
-            <div className="flex flex-col items-center w-full relative">
-              <div className="w-full text-black text-center font-roboto text-2xl font-bold leading-8 relative">
+          <div className="flex py-[15px] px-6 pb-6 flex-col items-center gap-4 self-stretch rounded-lg bg-[#EAE7FF] relative">
+            <div className="flex flex-col items-center self-stretch relative">
+              <div className="self-stretch text-black text-center font-roboto text-2xl font-bold leading-8 relative">
                 {data.graphSection.title}
               </div>
             </div>
-            <div className="flex justify-center items-center w-full relative">
+            <div className="flex justify-center items-center self-stretch relative">
               <img
-                className="h-[304px] max-w-[304px] flex-1 object-contain relative"
+                className="flex h-[304px] max-w-[304px] max-h-[304px] flex-col items-start flex-1 aspect-square relative"
                 src="https://api.builder.io/api/v1/image/assets/TEMP/be49ce657d709752d53209b945048c7586157ac2?width=608"
                 alt="AI learning timeline"
               />
