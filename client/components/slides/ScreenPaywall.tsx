@@ -343,21 +343,21 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
             </div>
 
             {/* Pricing Section */}
-            <div className="flex flex-col items-center gap-1 w-full relative">
-              <div className="flex flex-col items-start gap-4 w-full relative">
-                <div className="flex w-[388px] flex-col items-center relative">
+            <div className="flex flex-col items-center gap-[5px] self-stretch relative">
+              <div className="flex flex-col items-start gap-[15px] self-stretch relative">
+                <div className="flex flex-col items-center self-stretch relative">
                   <div className="text-black text-center font-roboto text-2xl font-bold leading-8 relative">
                     {data.tariffSection.title}
                   </div>
                 </div>
-                <div className="flex w-[388px] p-2 flex-col items-center rounded-lg bg-green-200 relative">
+                <div className="flex p-2 flex-col items-center self-stretch rounded-lg bg-green-200 relative">
                   <div className="text-green-800 text-center font-roboto text-sm font-bold leading-5 relative">
                     {data.tariffSection.subtitle}
                   </div>
                 </div>
 
                 {/* Pricing Options */}
-                <div className="flex w-[388px] flex-col items-start gap-4 relative">
+                <div className="flex flex-col items-start gap-4 self-stretch relative">
                   {data.tariffSection.options.map((option) => (
                     <div
                       key={option.id}
