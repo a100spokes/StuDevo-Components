@@ -382,7 +382,7 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
                         </div>
                       </div>
                       <div
-                        className={`flex h-[46px] p-2 items-start gap-1 rounded-[10px] relative ${
+                        className={`flex h-[46px] p-[9px] items-start gap-[3px] rounded-[10px] relative ${
                           selectedPlan.id === option.id
                             ? "bg-[#4F46E5]"
                             : "bg-[#EAE7FF]"
