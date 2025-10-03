@@ -626,24 +626,24 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
         </div>
         {/* Reviews Section */}
-        <div className="flex pt-6 flex-col items-start gap-6 w-full px-4 relative">
-          <div className="flex flex-col items-center w-full relative">
-            <div className="w-full text-black text-center font-roboto text-2xl font-bold leading-8 relative">
+        <div className="flex pt-6 flex-col items-start gap-6 self-stretch relative">
+          <div className="flex flex-col items-center self-stretch relative">
+            <div className="self-stretch text-black text-center font-roboto text-2xl font-bold leading-8 relative">
               {data.reviewSection.title}
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4 w-full relative">
+          <div className="flex flex-col items-start gap-4 self-stretch relative">
             {data.reviewSection.reviews.map((review) => (
               <div
                 key={review.id}
-                className="flex p-4 flex-col items-start gap-2 w-full rounded-lg bg-gray-100 relative"
+                className="flex p-4 flex-col items-start gap-2 self-stretch rounded-lg bg-gray-100 relative"
               >
-                <div className="flex flex-col items-start w-full relative">
-                  <div className="w-full text-black font-roboto text-sm font-normal leading-5 relative">
+                <div className="flex flex-col items-start self-stretch relative">
+                  <div className="self-stretch text-black font-roboto text-sm font-normal leading-5 relative">
                     {review.review}
                   </div>
                 </div>
-                <div className="flex items-center gap-0 w-full relative">
+                <div className="flex items-center gap-0 self-stretch relative">
                   <div className="flex items-start relative">
                     {[...Array(5)].map((_, i) => (
                       <div
