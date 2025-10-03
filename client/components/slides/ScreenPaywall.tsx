@@ -156,8 +156,8 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
         </div>
         {/* Results Comparison Section */}
-        <div className="flex p-4 flex-col items-start gap-3 w-full relative">
-          <div className="flex justify-center items-start gap-4 w-full relative">
+        <div className="flex py-4 px-0 flex-col items-center gap-[13px] self-stretch relative">
+          <div className="flex justify-center items-start gap-4 self-stretch relative">
             {data.resultsSection.tabs.map((tab, index) => (
               <div key={index} className="w-[168px] relative">
                 {/* Tab Title */}
