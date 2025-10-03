@@ -159,9 +159,9 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
         <div className="flex py-4 px-0 flex-col items-center gap-[13px] self-stretch relative">
           <div className="flex justify-center items-start gap-4 self-stretch relative">
             {data.resultsSection.tabs.map((tab, index) => (
-              <div key={index} className="w-[168px] relative">
+              <div key={index} className="flex flex-col items-center gap-3 flex-1 self-stretch relative">
                 {/* Tab Title */}
-                <div className="flex w-[168px] flex-col items-center h-6 relative">
+                <div className="flex flex-col items-center self-stretch relative">
                   <div className="text-gray-500 text-center font-roboto text-base font-bold leading-6 relative">
                     {tab.title}
                   </div>
