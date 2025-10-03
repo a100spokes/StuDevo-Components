@@ -362,14 +362,14 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
                     <div
                       key={option.id}
                       onClick={() => handlePlanSelect(option)}
-                      className={`flex p-3 items-center gap-3 w-full rounded-[10px] cursor-pointer transition-all ${
+                      className={`flex p-[13px] items-center gap-[13px] self-stretch rounded-[10px] cursor-pointer transition-all ${
                         selectedPlan.id === option.id
                           ? "border-2 border-[#4F46E5] bg-[#EAE7FF]"
                           : "bg-white shadow-sm border border-gray-100"
                       } relative`}
                     >
                       <div className="flex flex-col items-start gap-2 flex-1 relative">
-                        <div className="w-full text-[#31345D] font-open-sans text-lg font-normal leading-[14px] relative">
+                        <div className="self-stretch text-[#31345D] font-open-sans text-lg font-normal leading-[14px] relative">
                           {option.title}
                         </div>
                         <div className="flex w-[61.592px] items-center gap-2 relative">
