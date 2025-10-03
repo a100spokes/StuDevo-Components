@@ -162,14 +162,14 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
               <div key={index} className="flex flex-col items-center gap-3 flex-1 self-stretch relative">
                 {/* Tab Title */}
                 <div className="flex flex-col items-center self-stretch relative">
-                  <div className="text-gray-500 text-center font-roboto text-base font-bold leading-6 relative">
+                  <div className="text-gray-500 text-center font-roboto text-base font-semibold leading-6 relative">
                     {tab.title}
                   </div>
                 </div>
 
                 {/* Image */}
-                <div className="flex w-[168px] flex-col items-start mt-2 mb-4 relative">
-                  <div className="w-[168px] h-[168px] rounded-lg bg-gray-200 relative overflow-hidden">
+                <div className="flex flex-col items-center self-stretch relative">
+                  <div className="flex h-[168px] max-w-[168px] max-h-[168px] flex-col items-start self-stretch aspect-square rounded-lg relative overflow-hidden">
                     {index === 0 ? (
                       <img
                         src="https://api.builder.io/api/v1/image/assets/TEMP/e467e714e8a1fd00f9623ad179dc20f5e841bbf0?width=336"
