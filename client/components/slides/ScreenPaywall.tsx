@@ -310,19 +310,18 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
         </div>
         {/* Try Studevo Section */}
-        <div className="flex h-[1212px] flex-col items-start gap-[-7px] w-full relative">
-          <div className="flex pt-4 flex-col items-start gap-4 w-full px-4 relative">
-            <div className="flex flex-col items-center w-full relative">
-              <div className="w-full text-black text-center font-roboto text-2xl font-bold leading-8 relative">
+        <div className="flex flex-col items-center gap-[10px] self-stretch relative">
+          <div className="flex pt-4 flex-col items-start gap-4 self-stretch relative">
+            <div className="flex flex-col items-center self-stretch relative">
+              <div className="self-stretch text-black text-center font-roboto text-2xl font-bold leading-8 relative">
                 {data.youWillSection.title}
               </div>
             </div>
-            <div className="flex flex-col items-start gap-3 w-full relative">
+            <div className="flex px-[10px] flex-col items-start gap-3 self-stretch relative">
               {data.youWillSection.text.map((item, index) => (
-                <div key={index} className="flex items-center w-full relative">
-                  <div className="flex pr-2 flex-col items-start relative"></div>
-                  <div className="flex w-[356px] flex-col items-start relative">
-                    <div className="w-full text-black font-roboto text-base font-normal leading-6 relative">
+                <div key={index} className="flex items-center self-stretch relative">
+                  <div className="flex flex-col items-start flex-1 relative">
+                    <div className="self-stretch text-black font-roboto text-base font-normal leading-6 relative">
                       {Object.values(item)[0]}
                     </div>
                   </div>
