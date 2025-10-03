@@ -190,7 +190,7 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
                 </div>
 
                 {/* Progress Sections */}
-                <div className="flex w-[168px] flex-col items-start gap-2 relative">
+                <div className="flex flex-col items-start gap-2 self-stretch relative">
                   {/* AI Skills Progress */}
                   <div className="flex flex-col items-start w-full relative">
                     <div className="flex justify-between items-start w-full relative">
