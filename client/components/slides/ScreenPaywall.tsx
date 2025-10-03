@@ -563,8 +563,8 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
         </div>
         {/* Money-Back Guarantee */}
-        <div className="h-[284px] w-full rounded-lg bg-green-50 relative px-6 py-6">
-          <div className="absolute left-[182px] top-6 w-6 h-6 flex items-center justify-center text-green-500">
+        <div className="flex p-6 flex-col items-center gap-3 self-stretch rounded-lg bg-green-50 relative">
+          <div className="flex w-6 h-6 flex-col justify-center text-green-500 text-center relative">
             <svg
               className="w-6 h-6"
               viewBox="0 0 24 24"
@@ -581,13 +581,13 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
               />
             </svg>
           </div>
-          <div className="flex w-[340px] flex-col items-center absolute left-6 top-16 h-7">
+          <div className="flex flex-col items-center self-stretch relative">
             <div className="text-black text-center font-roboto text-xl font-bold leading-7 relative">
               {data.guaranteeSection.title}
             </div>
           </div>
-          <div className="flex w-[340px] flex-col items-center absolute left-6 top-[100px] h-40">
-            <div className="flex h-40 flex-col justify-center w-full text-gray-600 text-center font-roboto text-sm font-normal leading-5 relative">
+          <div className="flex flex-col items-center self-stretch relative">
+            <div className="self-stretch text-gray-600 text-center font-roboto text-sm font-normal leading-5 relative">
               {data.guaranteeSection.description}
             </div>
           </div>
