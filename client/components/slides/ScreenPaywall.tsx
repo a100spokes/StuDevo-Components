@@ -259,9 +259,9 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
         </div>
         {/* Readiness Section */}
-        <div className="flex flex-col items-start gap-6 w-full px-4 relative">
-          <div className="flex p-4 justify-between items-center w-full rounded-lg border border-yellow-300 bg-yellow-100 relative">
-            <div className="flex min-w-[294px] flex-col items-start relative">
+        <div className="flex flex-col items-start gap-[23px] self-stretch relative">
+          <div className="flex p-[17px] justify-between items-center self-stretch rounded-lg border border-yellow-300 bg-yellow-100 relative">
+            <div className="flex flex-col items-start flex-1 relative">
               <div className="flex flex-col items-start w-full relative">
                 <div className="text-black font-roboto text-base font-bold leading-6 relative">
                   {data.readinessSection.title}
