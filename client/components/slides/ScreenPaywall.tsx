@@ -159,7 +159,10 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
         <div className="flex py-4 px-0 flex-col items-center gap-[13px] self-stretch relative">
           <div className="flex justify-center items-start gap-4 self-stretch relative">
             {data.resultsSection.tabs.map((tab, index) => (
-              <div key={index} className="flex flex-col items-center gap-3 flex-1 self-stretch relative">
+              <div
+                key={index}
+                className="flex flex-col items-center gap-3 flex-1 self-stretch relative"
+              >
                 {/* Tab Title */}
                 <div className="flex flex-col items-center self-stretch relative">
                   <div className="text-gray-500 text-center font-roboto text-base font-semibold leading-6 relative">
@@ -319,7 +322,10 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
             </div>
             <div className="flex px-[10px] flex-col items-start gap-3 self-stretch relative">
               {data.youWillSection.text.map((item, index) => (
-                <div key={index} className="flex items-center self-stretch relative">
+                <div
+                  key={index}
+                  className="flex items-center self-stretch relative"
+                >
                   <div className="flex flex-col items-start flex-1 relative">
                     <div className="self-stretch text-black font-roboto text-base font-normal leading-6 relative">
                       {Object.values(item)[0]}
@@ -444,7 +450,8 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
                       </svg>
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 text-center font-roboto text-sm font-normal leading-5 relative">
-                      {" "}People using plan for 4 months achieve twice the
+                      {" "}
+                      People using plan for 4 months achieve twice the
                     </div>
                     <div className="flex flex-col justify-center text-gray-600 text-center font-roboto text-sm font-normal leading-5 relative">
                       results as people on 1-month plan.
@@ -601,7 +608,10 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
           <div className="flex flex-col items-start gap-3 self-stretch relative">
             {data.benefitsSection.list.map((benefit, index) => (
-              <div key={index} className="flex items-center self-stretch relative">
+              <div
+                key={index}
+                className="flex items-center self-stretch relative"
+              >
                 <div className="flex pr-2 flex-col items-start relative">
                   <svg
                     className="w-6 h-6"
