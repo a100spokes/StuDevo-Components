@@ -593,15 +593,15 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
         </div>
         {/* What You Get Section */}
-        <div className="flex pt-6 flex-col items-start gap-4 w-full px-4 relative">
-          <div className="flex flex-col items-center w-full relative">
-            <div className="w-full text-black text-center font-roboto text-2xl font-bold leading-8 relative">
+        <div className="flex pt-6 flex-col items-start gap-4 self-stretch relative">
+          <div className="flex flex-col items-center self-stretch relative">
+            <div className="self-stretch text-black text-center font-roboto text-2xl font-bold leading-8 relative">
               {data.benefitsSection.title}
             </div>
           </div>
-          <div className="flex flex-col items-start gap-3 w-full relative">
+          <div className="flex flex-col items-start gap-3 self-stretch relative">
             {data.benefitsSection.list.map((benefit, index) => (
-              <div key={index} className="flex items-center w-full relative">
+              <div key={index} className="flex items-center self-stretch relative">
                 <div className="flex pr-2 flex-col items-start relative">
                   <svg
                     className="w-6 h-6"
