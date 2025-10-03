@@ -252,8 +252,8 @@ const ScreenPaywall: React.FC<ScreenPaywallProps> = ({
           </div>
 
           {/* Results Disclaimer */}
-          <div className="flex pb-4 pl-4 pr-0 flex-col items-center w-full relative">
-            <div className="w-full text-gray-400 font-roboto text-xs font-normal leading-4 relative">
+          <div className="flex pb-4 flex-col items-start self-stretch relative">
+            <div className="self-stretch text-gray-400 font-roboto text-xs font-normal leading-4 relative">
               {data.resultsSection.subtitle}
             </div>
           </div>
